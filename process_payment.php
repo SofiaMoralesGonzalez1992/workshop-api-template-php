@@ -1,7 +1,7 @@
 <?php
     require_once 'vendor/autoload.php';
 
-    MercadoPago\SDK::setAccessToken(TEST-1988798749500461-012815-6512d60b19d5b94d58487f423b1e5fa3-283236162);
+    MercadoPago\SDK::setAccessToken("TEST-1988798749500461-012815-6512d60b19d5b94d58487f423b1e5fa3-283236162");
 
     $payment = new MercadoPago\Payment();
     $payment->transaction_amount = (float)$_POST['transactionAmount'];
@@ -24,7 +24,8 @@
     $response = array(
         'status' => $payment->status,
         'status_detail' => $payment->status_detail,
-        'id' => $payment->id
+        'id' => $payment->id,
+        'payment' => $payment
     );
     echo json_encode($response);
 
