@@ -222,6 +222,33 @@
                                             alert(`installments method info error: ${response}`);
                                         }
                                     }
+
+                                                                                    doSubmit = false;
+                                                document.getElementById('paymentForm').addEventListener('submit', getCardToken);
+                                                function getCardToken(event){
+                                                event.preventDefault();
+                                                if(!doSubmit){
+                                                    let $form = document.getElementById('paymentForm');
+                                                    window.Mercadopago.createToken($form, setCardTokenAndPay);
+                                                    return false;
+                                                }
+                                                };
+
+                                                function setCardTokenAndPay(status, response) {
+                                                if (status == 200 || status == 201) {
+                                                    let form = document.getElementById('paymentForm');
+                                                    let card = document.createElement('input');
+                                                    card.setAttribute('name', 'token');
+                                                    card.setAttribute('type', 'hidden');
+                                                    card.setAttribute('value', response.id);
+                                                    form.appendChild(card);
+                                                    doSubmit=true;
+                                                    form.submit();
+                                                } else {
+                                                    alert("Verify filled data!\n"+JSON.stringify(response, null, 4));
+                                                }
+                                                };
+
                                          </script>
                                 </div>
                             </div>
