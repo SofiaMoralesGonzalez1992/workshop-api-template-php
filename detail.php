@@ -47,7 +47,7 @@
                                     <hr class="p-0 m-0">
                                     <br>
                                     <!-- ADD PAYMENT FORM HERE -->
-                                    <form action="/process_payment" method="post" id="paymentForm">
+                                    <form action="/process_payment.php" method="post" id="paymentForm">
                                     <h3>Detalles del comprador</h3>
                                         <div>
                                         <div>
@@ -115,11 +115,12 @@
                                         </div>
                                     </div>
                                     </form>
-                                        <script>
-                                            window.Mercadopago.setPublishableKey(APP_USR-4d83e5d9-2488-40de-9a2b-9d6db1eca2b6);
+                                    
+                                    <script type="text/javascript">
+                                        
+                                        window.Mercadopago.setPublishableKey(TEST-25eac18c-e888-4a54-863f-c86269757a40);
                                              
-
-                                                window.Mercadopago.getIdentificationTypes();
+                                        window.Mercadopago.getIdentificationTypes();
 
                                                 document.getElementById('cardNumber').addEventListener('change', guessPaymentMethod);
 
