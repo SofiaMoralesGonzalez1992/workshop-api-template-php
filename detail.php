@@ -116,8 +116,8 @@
                                     </div>
                                     </form>
                                         <script>
-                                        
-                                             window.Mercadopago.setPublishableKey(TEST-11d1d687-7a23-44d2-b8f2-2883429eb15e);
+                                            window.Mercadopago.setPublishableKey(APP_USR-4d83e5d9-2488-40de-9a2b-9d6db1eca2b6);
+                                             
 
                                                 window.Mercadopago.getIdentificationTypes();
 
