@@ -173,10 +173,10 @@
                                                             document.getElementById('transactionAmount').value,
                                                             issuerSelect.value
                                                             );
-                                                            } else {
-                                                            alert(`issuers method info error: ${response}`);
-                                                            }
-                                                            }
+                                                                } else {
+                                                                alert(`issuers method info error: ${response}`);
+                                                                }
+                                                                }
                                                                 doSubmit = false;
                                             document.getElementById('paymentForm').addEventListener('submit', getCardToken);
                                             function getCardToken(event){
