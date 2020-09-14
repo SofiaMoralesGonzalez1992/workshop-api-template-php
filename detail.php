@@ -118,7 +118,7 @@
                                     <script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 
                                     <script>                                       
-                                        window.Mercadopago.setPublishableKey(TEST-25eac18c-e888-4a54-863f-c86269757a40);
+                                        window.Mercadopago.setPublishableKey("TEST-25eac18c-e888-4a54-863f-c86269757a40");
 
                                         window.Mercadopago.getIdentificationTypes();
 
